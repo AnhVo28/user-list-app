@@ -1,0 +1,210 @@
+
+.flex-center {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+
+
+/* Header*/
+.header {
+  background: #29abe2;
+
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+}
+
+.header a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.header h2 {
+  padding-left: 0.5em;
+  font-weight: bold;
+}
+
+.header ul li {
+  display: inline-block;
+  margin-right: 1em;
+  margin-top: 0.6em;
+}
+
+.header li a.active {
+  text-decoration: underline;
+}
+
+/* End header */
+
+
+/* container */
+
+.container li {
+  font-size: 1.1em;
+  color: #fff;
+  border-bottom: dotted 1px rgba(255,255,255, .4);
+  padding: 1em .85em;
+  background: #74afe1;
+
+}
+
+.container {
+  width: 60%;
+  margin: 2em auto 0;
+  padding: 1.5em;
+  background: #fff;
+  border-radius: .5em;
+  box-shadow: 0 2px 0 rgba(0,0,0,.1);
+  border: 1px solid #d9d9d9;
+}
+
+/* End container */
+
+
+/* Input Form */
+
+* {
+    box-sizing: border-box;
+}
+
+input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .container {
+      width: 90%;
+    }
+}
+/* End Input Form  */
+
+
+button {
+ background: #29abe2;
+ color: white;
+ padding: 7px 20px;
+ border-radius: 40px;
+ border: none;
+ transition: 0.1s ease-out;
+ cursor: pointer;
+ margin-top: 1em;
+   box-shadow: 0 7px 29px 0 rgba(41,171,226,0.55);
+}
+
+button:hover {
+  background: #0078a3;
+
+
+
+}
+
+.fa {
+  transition: 0.1s ease-out;
+  margin-left: 1em;
+}
+.fa:hover {
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+ul {
+  padding-left: 0;
+}
+
+/* =================================
+    ReactCSSTransitionGroup Classes
+==================================== */
+
+/* start enter state */
+.slide-enter {
+  transform: translateX(-100%);
+  opacity: 0.01
+}
+
+/* end enter state */
+.slide-enter.slide-enter-active{
+  transform: translateX(0%);
+  transition: 0.5s ease-out;
+  opacity: 1
+}
+
+/* start leave state */
+
+.slide-leave{
+  transform: translateX(0%);
+  opacity: 1
+}
+/* end leave state */
+.slide-leave.slide-leave-active{
+  transform: translateX(100%);
+  transition: 0.5s ease-out;
+  opacity: 0.01
+}
+
+/* initial mounting */
+.slide-appear{
+  opacity: 0;
+}
+
+.slide-appear.slide-appear-active{
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+}
