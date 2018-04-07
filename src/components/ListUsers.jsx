@@ -9,7 +9,7 @@ const ListUsers =(props)=> {
     <User user={user} key={i} index={i} />
   )
 
-    return <ReactCSSTransitionGroup  transitionName="example"
+    return <ReactCSSTransitionGroup  
           component='ul'
           transitionName='slide'
           transitionEnterTimeout={500}
